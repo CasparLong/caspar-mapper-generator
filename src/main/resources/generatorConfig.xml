@@ -22,6 +22,8 @@
             <property name="lombok" value="Getter,Setter,Data,ToString,Accessors,EqualsAndHashCode"/>
         </plugin>
 
+        <plugin type="org.mybatis.generator.plugins.SerializablePlugin"></plugin>
+
         <!--通用代码生成器插件-->
         <plugin type="tk.mybatis.mapper.generator.TemplateFilePlugin">
             <property name="targetProject" value="src/main/java"/>
@@ -42,8 +44,8 @@
 
         <sqlMapGenerator targetPackage="${dao.package}" targetProject="./src/main/java"></sqlMapGenerator>
 
-        <table tableName="uc_user">
-            <generatedKey column="id" sqlStatement="JDBC"/>
+        <table tableName="jwt_%">
+            <generatedKey column="id" sqlStatement="Mysql" identity="true"/>
         </table>
     </context>
 </generatorConfiguration>
