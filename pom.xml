@@ -80,6 +80,12 @@
                         <artifactId>mapper</artifactId>
                         <version>${mapper.version}</version>
                     </dependency>
+
+                    <dependency>
+                        <groupId>com.caspar</groupId>
+                        <artifactId>caspar-mapper-generator</artifactId>
+                        <version>1.0</version>
+                    </dependency>
                 </dependencies>
             </plugin>
         </plugins>
