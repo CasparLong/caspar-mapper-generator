@@ -4,6 +4,8 @@ import org.mybatis.generator.api.IntrospectedColumn;
 import org.mybatis.generator.api.dom.java.FullyQualifiedJavaType;
 import org.mybatis.generator.internal.types.JavaTypeResolverDefaultImpl;
 
+import java.sql.Types;
+
 /**
  * Description:
  *
@@ -14,6 +16,9 @@ public class MyJavaTypeResolver extends JavaTypeResolverDefaultImpl {
 
     public MyJavaTypeResolver() {
         super();
+        super.typeMap.put(Types.BIT, new JavaTypeResolverDefaultImpl.JdbcTypeInformation("BIT", new FullyQualifiedJavaType(Integer.class.getName())));
+        super.typeMap.put(Types.SMALLINT, new JavaTypeResolverDefaultImpl.JdbcTypeInformation("SMALLINT", new FullyQualifiedJavaType(Integer.class.getName())));
+        super.typeMap.put(Types.TINYINT, new JavaTypeResolverDefaultImpl.JdbcTypeInformation("TINYINT", new FullyQualifiedJavaType(Integer.class.getName())));
     }
 
     @Override
@@ -32,4 +37,6 @@ public class MyJavaTypeResolver extends JavaTypeResolverDefaultImpl {
 
         return answer;
     }
+
+
 }
