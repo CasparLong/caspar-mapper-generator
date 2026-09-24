@@ -14,7 +14,7 @@
         <mapper.version>4.1.5</mapper.version>
         <mysql.version>8.0.18</mysql.version>
         <lombok.version>1.18.10</lombok.version>
-        <freemarker.version>2.3.28</freemarker.version>
+        <freemarker.version>2.3.35</freemarker.version>
     </properties>
 
     <dependencies>
